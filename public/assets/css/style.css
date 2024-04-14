@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Start of header */
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 16px;
+}
+
+.nav a {
+    color: #a9a9a9;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.left img {
+    width: 130px;
+    height: 60px;
+    border-right: #eae9e6 solid 1px;
+    padding: 20px 0px 10px 0px;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+}
+
+/* end of header  */
+
+/* start of home */
+
+.main_left{
+    width: 75%;
+    height: 790px;
+    background-image: url('../img/heroKCE.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_section{
+    width: 75%;
+    height: 25%;
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    top: 73%;
+    z-index: 3;
+}
+
+.main_background{
+    width: 100%;
+    height: 28%;
+    background-color: #092151;
+    top: 72%;
+    position: relative;
+    z-index: 1;
+    opacity: 88%;
+}
+
+.section_top h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.section_middle p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.section_bottom{
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section_bottom a{
+    width: 135px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: orange;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+.main_left img{
+    width: 70%;
+    margin-bottom: -10px;
+}
+
+/* end of home */
+
+/* start of footer  */
+
+.footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer a{
+    color: #a9a9a9;
+}
+
+.footer_left {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 5px;
+}
+
+.footer_left img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+
+.tos{
+    display: flex;
+    padding-right: 30px;
+    gap: 15px;
+}
+
+/* end of footer  */
