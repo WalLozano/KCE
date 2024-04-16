@@ -18,6 +18,7 @@
     align-items: center;
     padding: 0 30px;
     font-size: 16px;
+    background-color: #fff;
 }
 
 .nav a {
@@ -44,9 +45,29 @@
 
 /* end of header  */
 
+
 /* start of home */
 
-.main_left{
+
+.entrance {
+    display: flex;
+    animation: myAnim 0.5s ease-in 0s 1 normal forwards;
+    width: 100%;
+}
+
+@keyframes myAnim {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main_left {
     width: 75%;
     height: 790px;
     background-image: url('../img/heroKCE.jpg');
@@ -54,40 +75,40 @@
     background-size: cover;
 }
 
-.main_section{
+.main_section {
     width: 75%;
     height: 25%;
     color: #fff;
     padding: 30px;
     position: absolute;
-    top: 73%;
+    top: 70%;
     z-index: 3;
 }
 
-.main_background{
+.main_background {
     width: 100%;
-    height: 28%;
+    height: 30%;
     background-color: #092151;
-    top: 72%;
+    top: 70%;
     position: relative;
     z-index: 1;
     opacity: 88%;
 }
 
-.section_top h1{
+.section_top h1 {
     font-size: 40px;
     font-weight: 600;
     margin: 5px 0;
 }
 
-.section_middle p{
+.section_middle p {
     font-size: 18px;
     font-weight: 300;
     line-height: 25px;
     text-align: justify;
 }
 
-.section_bottom{
+.section_bottom {
     width: 100%;
     height: 85px;
     display: flex;
@@ -95,26 +116,187 @@
     gap: 20px;
 }
 
-.section_bottom a{
+.section_bottom a {
     width: 135px;
     height: 40px;
     border-radius: 4px;
     font-size: 16px;
-    background-color: orange;
     margin: 20px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    background: rgb(245, 128, 35);
+    background: linear-gradient(180deg, rgba(245, 128, 35, 1) 0%, rgba(245, 161, 35, 1) 100%);
+}
+
+.section_bottom a:hover {
+    background: rgb(245, 161, 35);
+    background: linear-gradient(180deg, rgba(245, 161, 35, 1) 0%, rgba(245, 128, 35, 1) 100%);
 }
 
 
-.main_left img{
+.main_left img {
     width: 70%;
     margin-bottom: -10px;
 }
 
+
+.main_right {
+    width: 25%;
+    color: #fff;
+}
+
+.main_right section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.right_top {
+    width: 100%;
+    height: 70px;
+    background-color: #F57D23;
+    padding: 20px;
+
+}
+
+.right_top h4 {
+    font-weight: 100;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+.right_middle {
+    width: 100%;
+    height: 670px;
+    background-color: #f5a523;
+    padding: 10px 30px 30px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.right_middle ul {
+    list-style: none;
+}
+
+.right_middle li {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.right_bottom {
+    height: 50px;
+    background-color: #0e51c7;
+}
+
 /* end of home */
+
+
+/* start of FAQ */
+
+body {
+    background-color: #EAE9E6;
+}
+
+.faq_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 100px;
+}
+
+.accordion {
+    background-color: #498fe1;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    width: 75%;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 43px;
+}
+
+
+
+
+.faq_container p{
+    font-weight:  300;
+}
+
+.faq_text{
+    width: 75%;
+    margin-top: 20px;
+}
+
+.faq_text h1{
+    color: #5c5b5c;
+    font-weight: 500;
+}
+
+.faq_text input{
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #a9a9a9;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+
+.accordion:after {
+    content: '\002B';
+    color: #FFF;
+    font-size: 45px;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #498fe1;
+    color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 75%;
+    position: relative;
+    top: -10px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.panel a{
+    color: #a9a9a9;
+}
+
+.bottom_space{
+    padding: 0 20px 40px;
+}
+
+/* end of FAQ */
+
+
 
 /* start of footer  */
 
@@ -129,7 +311,7 @@
     font-size: 14px;
 }
 
-.footer a{
+.footer a {
     color: #a9a9a9;
 }
 
@@ -148,10 +330,12 @@
 }
 
 
-.tos{
+.tos {
     display: flex;
     padding-right: 30px;
     gap: 15px;
 }
+
+
 
 /* end of footer  */
