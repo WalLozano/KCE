@@ -26,6 +26,8 @@
                 </div>
             </section>
         </div>
+
+        
         <div class="main_right">
             <section>
                 <div class="right_top">

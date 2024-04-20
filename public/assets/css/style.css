@@ -10,6 +10,8 @@
     font-family: "Source Sans 3", sans-serif;
 }
 
+
+
 .nav {
     display: flex;
     width: 100%;
@@ -67,9 +69,10 @@
     }
 }
 
+
 .main_left {
     width: 75%;
-    height: 790px;
+    height: 94vh;
     background-image: url('../img/heroKCE.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -145,6 +148,7 @@
 .main_right {
     width: 25%;
     color: #fff;
+    height: 94vh;
 }
 
 .main_right section {
@@ -170,7 +174,7 @@
 
 .right_middle {
     width: 100%;
-    height: 670px;
+    height: 81.1vh;
     background-color: #f5a523;
     padding: 10px 30px 30px;
     color: #fff;
@@ -190,152 +194,452 @@
 .right_bottom {
     height: 50px;
     background-color: #0e51c7;
+    padding: 15px 0 0 30px;
+}
+
+.right_bottom a {
+    color: #fff;
+    font-size: 16px;
+
 }
 
 /* end of home */
 
 
-/* start of FAQ */
+/* modal styles */
 
-body {
-    background-color: #EAE9E6;
-}
-
-.faq_container {
-    display: flex;
-    flex-direction: column;
+.loginInput {
     width: 100%;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.accordion {
-    background-color: #498fe1;
-    color: #fff;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    transition: 0.4s;
-    width: 75%;
-    height: 100px;
-    border-radius: 5px;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 43px;
-}
+/* Set a style for all buttons */
 
-
-
-
-.faq_container p{
-    font-weight:  300;
-}
-
-.faq_text{
-    width: 75%;
-    margin-top: 20px;
-}
-
-.faq_text h1{
-    color: #5c5b5c;
-    font-weight: 500;
-}
-
-.faq_text input{
-    width: 100%;
-    height: 60px;
-    padding-left: 20px;
-    font-size: 15px;
-    font-weight: 100;
+#loginBtn {
+    background-color: transparent;
     color: #a9a9a9;
-    border-radius: 5px;
-    border: 0;
-    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+#loginSubmit {
+    margin-top: 20px;
+    display: block;
+    font-size: 16px;
+    line-height: 38px;
+    font-weight: 100;
+    width: 100%;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+    border: solid 1px #f57d23;
+    border-radius: 4px;
+    background-image: linear-gradient(180deg, #f57d23 0%, #f5a523 100%);
+}
+
+#faq_register, #footer_register {
     margin-top: 15px;
 }
 
 
-.accordion:after {
-    content: '\002B';
-    color: #FFF;
-    font-size: 45px;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2212";
-}
-
-.panel {
-    padding: 0 18px;
-    background-color: #498fe1;
-    color: #fff;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    width: 75%;
-    position: relative;
-    top: -10px;
-    border-radius: 0px 0px 5px 5px;
-}
-
-.panel a{
-    color: #a9a9a9;
-}
-
-.bottom_space{
-    padding: 0 20px 40px;
-}
-
-/* end of FAQ */
-
-
-
-/* start of footer  */
-
-.footer {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-    color: #fff;
-    font-size: 14px;
-}
-
-.footer a {
-    color: #a9a9a9;
-}
-
-.footer_left {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    gap: 5px;
-}
-
-.footer_left img {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
-    margin-top: 5px;
+#loginSubmit:hover {
+    opacity: 0.8;
+    background-image: linear-gradient(180deg, #f5a523 0%, #f57d23 100%, );
 }
 
 
-.tos {
-    display: flex;
-    padding-right: 30px;
-    gap: 15px;
-}
+    /* Center the image and position the close button */
+    #closeBtn {
+        text-align: end;
+        position: relative;
+        top: -25px;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    #containerRegister{
+        margin: 50px;
+        margin-left: 20%;
+
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Black w/ opacity */
+        padding-top: 10%;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 20%;
+        /* Could be more or less, depending on screen size */
+    }
+
+    .container h2{
+        font-size: 30px;
+    }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: -10px;
+        top: -15px;
+        color: #ffffff;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    #loginform {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 10px auto;
+        border-radius: 5px;
+        background-color: #102857;
+        opacity: 95%;
+    }
+
+    #loginform p {
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    @media screen and (max-width: 43.75em) {
+        #loginform p {
+            width: 100% !important;
+            float: none !important;
+        }
+    }
+
+    #loginform input {
+        height: 70px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+    }
+
+    @media screen and (max-width: 43.75em) {
+        #loginform input {
+            width: 100% !important;
+            float: none !important;
+        }
+    }
+
+    #loginform input[type=text] {
+        height: 70px;
+        width: 100%;
+        border: none;
+        padding-left: 20px !important;
+    }
+
+
+    #loginform label {
+        color: #424242;
+        display: none;
+    }
+
+    #loginform #user_pass {
+        padding-left: 10px;
+    }
+
+    #loginform .login-submit {
+        margin: 15px auto;
+        float: none;
+        height: 70px;
+        display: block;
+    }
+
+    /* Animation of login modal */
+    .animate {
+        -webkit-animation: fadeInDown 0.6s;
+        animation: fadeInDown 0.6s
+    }
+
+    @-webkit-keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+        }
+    }
+
+    @-moz-keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            -moz-transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            -moz-transform: translateY(0);
+        }
+    }
+
+    @-o-keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            -o-transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            -o-transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animated.fadeInDown {
+        -webkit-animation-name: fadeInDown;
+        -moz-animation-name: fadeInDown;
+        -o-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+
+    /* end of modal styles */
+    /* start of FAQ */
+
+    body {
+        background-color: #EAE9E6;
+    }
+
+    .faq_container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 100px;
+    }
+
+    .accordion {
+        background-color: #498fe1;
+        color: #fff;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition: 0.4s;
+        width: 75%;
+        height: 100px;
+        border-radius: 5px;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 43px;
+    }
 
 
 
-/* end of footer  */
+
+    .faq_container p {
+        font-weight: 300;
+    }
+
+    .faq_text {
+        width: 75%;
+        margin-top: 20px;
+    }
+
+    .faq_text h1 {
+        color: #5c5b5c;
+        font-weight: 500;
+    }
+
+    .faq_text input {
+        width: 100%;
+        height: 60px;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: 100;
+        color: #a9a9a9;
+        border-radius: 5px;
+        border: 0;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+
+
+    .accordion:after {
+        content: '\002B';
+        color: #FFF;
+        font-size: 45px;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2212";
+    }
+
+    .panel {
+        padding: 0 18px;
+        background-color: #498fe1;
+        color: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        width: 75%;
+        position: relative;
+        top: -10px;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    .panel a {
+        color: #a9a9a9;
+    }
+
+    .bottom_space {
+        padding: 0 20px 40px;
+    }
+
+    /* end of FAQ */
+
+    /* start of contact */
+
+    .contact_container {
+        width: 100%;
+        height: 78vh;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        margin: 30px 0 0 120px;
+    }
+
+    .card_container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 50px;
+    }
+
+    .contact_card {
+        display: flex;
+        text-align: left;
+    }
+
+    /* end of contact */
+
+
+    /* start of footer  */
+
+    .footer {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .footer a {
+        color: #a9a9a9;
+    }
+
+    .footer_left {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        gap: 5px;
+    }
+
+    .footer_left img {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+
+
+    .tos {
+        display: flex;
+        padding-right: 30px;
+        gap: 15px;
+    }
+
+
+
+    /* end of footer  */
