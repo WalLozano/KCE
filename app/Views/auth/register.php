@@ -69,7 +69,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputCity">City</label>
-                        <input placeholder="Kansas City" type="text" class="form-control" name="city" value="<?= set_value('City') ?>">
+                        <input placeholder="Kansas City" type="text" class="form-control" name="city" value="<?= set_value('city') ?>">
                         <span class="text-danger"> <?php  echo validation_show_error('city');  ?> </span>
                     </div>
                     <div class="form-group col-md-4">

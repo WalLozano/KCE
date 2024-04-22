@@ -218,7 +218,8 @@ class Auth extends BaseController
 
             $userModel = new UserModel();
             $userInfo = $userModel->where('email', $email)->first();
-            $checkPassword = Hash::check($password, $userInfo);
+
+            $checkPassword = Hash::check($password, $userInfo[('password')]);
 
             // checking email with in database
 
@@ -234,7 +235,7 @@ class Auth extends BaseController
             }
             else if (!$checkPassword) {
                 session()->setFlashdata('fail', 'Incorrect password try again');
-                return redirect()->route('/auth/tryAgain');
+                return redirect()->route('auth/tryAgain');
             } else {
                 // Process user info
 

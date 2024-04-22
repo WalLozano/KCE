@@ -24,7 +24,7 @@
                         <span class="text-danger"> <?php echo validation_show_error('loginUser');  ?> </span>
                         <br>
                         <label for="psw"><b>Password</b></label>
-                        <input class="loginInput form-control" type="password" placeholder="Enter Password" name="loginPassword">
+                        <input class="loginInput form-control" type="text" placeholder="Enter Password" name="loginPassword">
                         <br>
                         <span class="text-danger"> <?php echo validation_show_error('loginPassword');  ?> </span>
 
