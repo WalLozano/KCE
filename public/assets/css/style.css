@@ -250,10 +250,51 @@ button {
     background-image: linear-gradient(180deg, #f57d23 0%, #f5a523 100%);
 }
 
+.tryAgain{
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin: 10.7% 0;;
+}
+
+#loginformTryAgain {
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #102857;
+    opacity: 95%;
+}
+
+#loginformTryAgain label{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#TryAgainTitle h1{
+    color: #fff;
+}
+
+#bodyTryAgain{
+    overflow-x: hidden;
+}
+
 #faq_register, #footer_register {
     margin-top: 15px;
 }
 
+.container h1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
 
 #loginSubmit:hover {
     opacity: 0.8;

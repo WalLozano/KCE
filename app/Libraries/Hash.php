@@ -9,4 +9,16 @@ class Hash
     {
         return password_hash($password, PASSWORD_BCRYPT);
     }
+
+    // Check user passsword with db password
+
+    public static function check($userPassword, $dbUserPassword)
+    {
+        if(password_verify($userPassword, $dbUserPassword))
+        {
+            return true;
+        }
+        return false;
+    }   
 }
+

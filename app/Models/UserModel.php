@@ -43,4 +43,11 @@ class UserModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+    public function checkUserExists($username)
+    {
+        $user = $this->where('email', $username)->first();
+        return $user;
+    }
 }

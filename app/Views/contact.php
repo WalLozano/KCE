@@ -2,7 +2,7 @@
 
 <?php echo $this->section('content'); ?>
 
-<div class="contact_container">
+<div class="contact_container entrance">
 
     <div class="tittle"><h1>Contact</h1></div>
     <div class="card_container">

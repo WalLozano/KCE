@@ -29,23 +29,28 @@
 
 <div id="id01" class="modal">
 
-<form id="loginform" class="animate" action="/action_page.php" method="post">
+<form id="loginform" class="animate" action="auth/loginUser" method="post">
     
     <div class="closeBtn">
     <button id="closeBtn"  onclick="document.getElementById('id01').style.display='none'" class="close">&times;</button>
     </div>
     
     <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input class="loginInput" type="text" placeholder="Enter Username" name="uname" required>
+    <form action="<?php base_url('auth/loginUser') ?>">
+        <label for="psw"><b>User</b></label>
+        <input class="loginInput" type="text" placeholder="Enter Username" name="loginUser" >
+        <span class="text-danger"> <?php  echo validation_show_error('loginUser');  ?> </span>
 
         <label for="psw"><b>Password</b></label>
-        <input class="loginInput" type="password" placeholder="Enter Password" name="psw" required>
+        <input class="loginInput" type="password" placeholder="Enter Password" name="loginPassword" >
+        <span class="text-danger"> <?php  echo validation_show_error('loginPassword');  ?> </span>
 
         <button id="loginSubmit"  type="submit">Login</button>
         <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
+        </form>
+        
     </div>
 </form>
 </div>

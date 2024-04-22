@@ -4,19 +4,37 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url('../assets/css/style.css') ?>">
-    <title>Hello, world!</title>
 </head>
 
 <body>
 
 
     <!-- Modal -->
-    <div  id="containerRegister" class="container entrance">
 
+    <?php 
+        if(!empty(session()->getFlashdata('success'))){
+            ?>
+                <div class="alert alert-success">
+                    <?=
+                        session()->getFlashdata('success')
+                    ?>
+                </div>
+            <?php
+        }else if(!empty(session()->getFlashdata('fail'))){
+            ?>
+                <div class="alert alert-danger">
+                    <?=
+                        session()->getFlashdata('fail')
+                    ?>
+                </div>
+            <?php
+        }
+        ?>
+
+    <div  id="containerRegister" class="container entrance">
 
         <form action=" <?= base_url('auth/registerUser') ?>" class="form" method="post">
             <?= csrf_field(); ?>
@@ -51,28 +69,28 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputCity">City</label>
-                        <input type="text" class="form-control" name="city" value="<?= set_value('City') ?>">
+                        <input placeholder="Kansas City" type="text" class="form-control" name="city" value="<?= set_value('City') ?>">
                         <span class="text-danger"> <?php  echo validation_show_error('city');  ?> </span>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">State</label>
-                        <input type="text" class="form-control" name="state" value="<?= set_value('state') ?>">
+                        <input placeholder="Missouri" type="text" class="form-control" name="state" value="<?= set_value('state') ?>">
                         <span class="text-danger"> <?php  echo validation_show_error('state');  ?> </span>
                         </select>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputZip">Zip</label>
-                        <input type="number" class="form-control" name="zip" value="<?= set_value('zip') ?>">
+                        <input placeholder="12345" type="number" class="form-control" name="zip" value="<?= set_value('zip') ?>">
                         <span class="text-danger"> <?php  echo validation_show_error('zip');  ?> </span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="phone">Phone</label>
-                        <input type="tel" class="form-control" name="phone" value="<?= set_value('phone') ?>">
+                        <input placeholder="123-123-1234" type="tel" class="form-control" name="phone" value="<?= set_value('phone') ?>">
                         <span class="text-danger"> <?php  echo validation_show_error('phone');  ?> </span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" value="<?= set_value('email') ?>">
+                        <input placeholder="example@example.com" type="email" class="form-control" name="email" value="<?= set_value('email') ?>">
                         <span class="text-danger"> <?php  echo validation_show_error('email');  ?> </span>
                     </div>
                 </div>
